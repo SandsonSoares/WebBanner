@@ -35,31 +35,39 @@
             <div class="caixa" id="foto1" onclick="aparecer(0)">
                 <article>
                     <h1 class="titulo">Montagem de Computador</h1>
-                    <p>
-                        Conteúdo
+                    <p class="conteudo">
+                        Montagem de computador já com as peças fornecidas pelo cliente, entretanto posso dar um suporte para comprar as peças que atendam a sua necessidade
                     </p>
                 </article>
             </div>
             <div class="caixa" id="foto2" onclick="aparecer(1)">
                 <article>
                     <h1 class="titulo">Formatação</h1>
-                    <p>
-                        Conteúdo
+                    <p class="conteudo">
+                        Formatação do computador mantendo o windows, somente apagando tudo que é aplicativos e arquivos.
                     </p>
                 </article>
             </div>
-            <div class="caixa" id="foto3">
+            <div class="caixa" id="foto3" onclick="aparecer(2)">
                 <article>
                     <h1 class="titulo">Limpeza</h1>
-                    <p>
-                        Conteúdo
+                    <p class="conteudo">
+                        Limpeza interna do gabinete e as peças incluindo a troca pasta térmica.
                     </p>
                 </article>
             </div>
-            <div class="caixa" id="foto4">
+            <div class="caixa" id="foto4" onclick="aparecer(3)">
                 <article>
                     <h1 class="titulo">Limpeza de HD</h1>
-                    <p>
+                    <p class="conteudo">
+                        Consiste em apagar TODOS os dados do HD e deixa-lo completamente limpo (sem nada) ou com o windows apenas
+                    </p>
+                </article>
+            </div>
+            <div class="caixa">
+                <article>
+                    <h1 class="titulo">Serviços futuros</h1>
+                    <p class="conteudo">
                         Conteúdo
                     </p>
                 </article>
@@ -67,7 +75,7 @@
             <div class="caixa">
                 <article>
                     <h1 class="titulo">Serviços futuros</h1>
-                    <p>
+                    <p class="conteudo">
                         Conteúdo
                     </p>
                 </article>
@@ -75,7 +83,7 @@
             <div class="caixa">
                 <article>
                     <h1 class="titulo">Serviços futuros</h1>
-                    <p>
+                    <p class="conteudo">
                         Conteúdo
                     </p>
                 </article>
@@ -83,7 +91,7 @@
             <div class="caixa">
                 <article>
                     <h1 class="titulo">Serviços futuros</h1>
-                    <p>
+                    <p class="conteudo">
                         Conteúdo
                     </p>
                 </article>
@@ -91,15 +99,7 @@
             <div class="caixa">
                 <article>
                     <h1 class="titulo">Serviços futuros</h1>
-                    <p>
-                        Conteúdo
-                    </p>
-                </article>
-            </div>
-            <div class="caixa">
-                <article>
-                    <h1 class="titulo">Serviços futuros</h1>
-                    <p>
+                    <p class="conteudo">
                         Conteúdo
                     </p>
                 </article>
@@ -107,19 +107,23 @@
         </div>
     </section>
     <script>
+        var teste = true
         function aparecer(posicao) {
-            for (let i = 0; i <= posicao; i++) {
-                    let titulo = document.getElementsByClassName("titulo")[i]
-                    let paragrafo = document.getElementsByTagName("p")[i]
-                if (i == posicao) {
-                    titulo.style.display = "none"
-                    paragrafo.style.display = "block"
-                }
-                else{
-                    titulo.style.display = "block"
-                    paragrafo.style.display = "none"
-                }
+            let p = document.getElementsByClassName("conteudo")[posicao]
+            let h1 = document.getElementsByClassName("titulo")[posicao]
+            let article = document.getElementsByTagName("article")[posicao]
+            if (teste == true) {
+                p.style.display = "block"
+                h1.style.display = "none"
+                article.style.padding ="5px"
+                teste = false
             }
+            else {
+                p.style.display = "none"
+                h1.style.display = "block"
+                teste = true
+            }
+            
         }
     </script>
 </body>
