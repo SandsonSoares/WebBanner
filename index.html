@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuntenção de computadores</title>
+    <link rel="shortcut icon" href="imgens/IconeLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <Header>
+        <section class="top">
+            <div>
+                <img src="imgens/IconeLogo.png" alt="Logo">
+                <h1>SandsonSoares</h1>
+            </div>
+
+            <ul id="topMenu">
+                <li>
+                    <a href="https://criarmeulink.com.br/u/1669764472" target="_blank"><img
+                            src="imgens/IconeTelegram.png" alt="Telegram"></a>
+                </li>
+                <li>
+                    <a href="https://wa.me/message/QOC5DOS3QW3VB1" target="_blank"><img src="imgens/IconeWhatsapp.png"
+                            alt="Whatsapp"></a>
+                </li>
+            </ul>
+        </section>
+    </Header>
+    <section class="grade">
+        <div class="rede">
+            <div class="caixa" id="foto1" onclick="aparecer(0)">
+                <article>
+                    <h1 class="titulo">Montagem de Computador</h1>
+                    <p>
+                        Conteúdo
+                    </p>
+                </article>
+            </div>
+            <div class="caixa" id="foto2" onclick="aparecer(1)">
+                <article>
+                    <h1 class="titulo">Formatação</h1>
+                    <p>
+                        Conteúdo
+                    </p>
+                </article>
+            </div>
+            <div class="caixa" id="foto3">
+                <article>
+                    <h1 class="titulo">Limpeza</h1>
+                    <p>
+                        Conteúdo
+                    </p>
+                </article>
+            </div>
+            <div class="caixa" id="foto4">
+                <article>
+                    <h1 class="titulo">Limpeza de HD</h1>
+                    <p>
+                        Conteúdo
+                    </p>
+                </article>
+            </div>
+            <div class="caixa">
+                <article>
+                    <h1 class="titulo">Serviços futuros</h1>
+                    <p>
+                        Conteúdo
+                    </p>
+                </article>
+            </div>
+            <div class="caixa">
+                <article>
+                    <h1 class="titulo">Serviços futuros</h1>
+                    <p>
+                        Conteúdo
+                    </p>
+                </article>
+            </div>
+            <div class="caixa">
+                <article>
+                    <h1 class="titulo">Serviços futuros</h1>
+                    <p>
+                        Conteúdo
+                    </p>
+                </article>
+            </div>
+            <div class="caixa">
+                <article>
+                    <h1 class="titulo">Serviços futuros</h1>
+                    <p>
+                        Conteúdo
+                    </p>
+                </article>
+            </div>
+            <div class="caixa">
+                <article>
+                    <h1 class="titulo">Serviços futuros</h1>
+                    <p>
+                        Conteúdo
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <script>
+        function aparecer(posicao) {
+            for (let i = 0; i <= posicao; i++) {
+                    let titulo = document.getElementsByClassName("titulo")[i]
+                    let paragrafo = document.getElementsByTagName("p")[i]
+                if (i == posicao) {
+                    titulo.style.display = "none"
+                    paragrafo.style.display = "block"
+                }
+                else{
+                    titulo.style.display = "block"
+                    paragrafo.style.display = "none"
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
